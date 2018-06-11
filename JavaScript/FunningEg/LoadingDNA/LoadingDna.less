@@ -1,0 +1,63 @@
+@section_height:400px;
+@width_height:50px;
+@top_bottom:@section_height - 4*@width_height;
+
+.site-canvas {
+  background:#f7f7f7;
+  height:800px;
+  //width:100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dna {
+  //background: #0e77ca;
+  width:90%;
+  //height:100%;
+  text-align:center;
+  overflow:hidden;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.dna_section {
+  margin:0 5px;
+  width:50px;
+  height:@section_height;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.dna_section .node {
+  position:relative;
+  width:@width_height;
+  height:@width_height;
+  border-radius:100%;
+}
+.dna_section .node.top {
+  top:auto;
+  bottom:@top_bottom;
+  background:#5E0035;
+  animation:4s topNode ease-in-out infinite;
+}
+@keyframes topNode {
+  0% {transform:scale(0.5);top:0;z-index:10;opacity:0.75;}
+  25% {transform:scale(1);opacity:1;}
+  50% {transform:scale(0.5);top:@top_bottom;z-index:0;opacity:0.75;}
+  75% {transform:scale(0.25);opacity:0.5;}
+  100% {transform:scale(0.5);top:0;opacity:0.75;}
+}
+.dna_section .node.bottom {
+  top:auto;
+  bottom:0;
+  background:#5C80BC;
+  animation:4s bottomNode ease-in-out infinite;
+}
+@keyframes bottomNode {
+  0% {transform:scale(0.5);bottom:0; opacity:0.75;}
+  25% {transform:scale(0.25);opacity:0.5;}
+  50% {transform:scale(0.5);bottom:@top_bottom; opacity:0.75;}
+  75% {transform:scale(1); opacity:1;}
+  100% {transform:scale(0.5);bottom:0; opacity:0.75;}
+}
