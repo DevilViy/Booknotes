@@ -7,7 +7,7 @@
   3. 这样的好处在于：
      - 自己可以在脱机环境查看开发的版本历史。
      - 多人开发时如果充当中央仓库的Git仓库挂了，可以随时创建一个新的中央仓库然后同步就立刻恢复了中央库。
-  
+
  ## Git命令
 ### 创建版本库
 #### 初始化一个Git仓库
@@ -104,6 +104,20 @@ $ git checkout -- text.txt
 ```
 Q：如果真的想从版本库里面删除文件怎么做？
 A：执行`git commit -m "delete text.txt"`，提交后最新的版本库将不包含这个文件
+
+#### 替换本地改动
+出现这种情况
+```bash
+Your branch is ahead of 'origin/master' by 2 commits.
+```
+假如你想丢弃你在本地的所有改动与提交，
+可以到服务器上获取最新的版本历史，
+并将你本地主分支指向它：
+```bash
+git fetch origin
+
+git reset --hard origin/master
+```
 
 ### 分支管理
 #### 创建合并分支
