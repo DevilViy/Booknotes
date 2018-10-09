@@ -11,6 +11,8 @@
 - 定义一套适配规则，自动适配剩下的两种尺寸(其实不仅这两种，你懂的)
 - 特殊适配效果给出设计效果
 
+ui设计师设计界面时建议以iphone6的两倍尺寸（750px）为设计标准尺寸
+
 手淘设计师常选择iPhone6作为基准设计尺寸，交付给前端的设计尺寸是按`750px * 1334px`为准(高度会随着内容多少而改变)。前端开发人员通过一套适配规则自动适配到其他的尺寸。
 
 ![淘宝设计方案](./images/taobaoAdapterPlan.jpg)
@@ -128,6 +130,8 @@ Viewport相关的单位有四个，分别为`vw`、`vh`、`vmin`和`vmax`
 
 // TODO
 物理像素线（也就是普通屏幕下 1px ，高清屏幕下 0.5px 的情况）采用 transform 属性 scale 实现。
+
+[1p显示](https://segmentfault.com/a/1190000016116868)
 ```
 .mod_grid {
     position: relative;
