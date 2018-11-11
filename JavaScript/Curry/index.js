@@ -13,7 +13,7 @@ module.exports.test2 = (input) => {
 */
 const test2 = input => {
   const fn = data => {
-    const fn2 = data2 => (data2 ? fn(data2 + data) : data);
+    const fn2 = data2 => (data2 === undefined ? data : fn(data2 + data));
     return fn2;
   };
   return input === undefined ? 0 : fn(input);
