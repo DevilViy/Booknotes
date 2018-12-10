@@ -54,6 +54,7 @@ setTimeout(function(){
 如果主线程执行内容很多,执行时间超过3秒,比如执行了10秒,那么这个函数只能10秒后执行了
 
 ## 测试
+
 ```
 async function async1() {
   console.log("async1 start");
@@ -110,4 +111,5 @@ promise2
 setTimeout
 ```
 ## 参考链接
-[segmentfault,10分钟理解JS引擎的执行机制](https://segmentfault.com/a/1190000012806637)
+- [segmentfault,10分钟理解JS引擎的执行机制](https://segmentfault.com/a/1190000012806637)
+- [看清 async/await 和 promise 的执行顺序](https://segmentfault.com/a/1190000017224799)
