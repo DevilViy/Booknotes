@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>测试增加Flex overflow</title>
+</head>
+<style>
+  body {
+    margin: 0;
+  }
+
+  .box {
+    background: #ccf;
+    display: flex;
+    flex-direction: row;
+  }
+  .box>div{
+    /*默认情况下，元素不会缩短至小于内容框尺寸，若想改变这一状况，请设置元素的min-width 与 min-height属性。*/
+    min-width: 0;
+  }
+
+  .box1 {
+    width: 300px;
+    height: 400px;
+    background: #fff;
+  }
+
+  .box2 {
+    flex: 1
+  }
+
+  .over-flow-box {
+    background: #bbbbbb;
+    overflow: auto;
+    height: 100px
+  }
+
+  .content {
+    background: #2e9207;
+    width: 2000px
+  }
+</style>
+<body>
+<div class="box">
+  <div class="box1">盒子1</div>
+  <div class="box2">自适应盒子二
+    <div class="over-flow-box">
+      <div class="content">内部宽度2000px</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
