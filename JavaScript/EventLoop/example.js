@@ -15,9 +15,9 @@ async function async2() {
     console.log("async2 promise");
     resolve();
   })
-  //     .then(() => {
-  //   console.log("async2 promise then");
-  // }); // 加与不加会影响最终结果
+      .then(() => {
+    console.log("async2 promise then");
+  }); // 加与不加会影响最终结果
 }
 
 console.log("script start");
@@ -26,7 +26,7 @@ setTimeout(function() {
   console.log("setTimeout");
 }, 0);
 
-async1();
+async1().then(resp=>{console.log('????我是最后吗')});
 
 new Promise(function(resolve) {
   console.log("promise1");
