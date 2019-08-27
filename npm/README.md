@@ -162,6 +162,14 @@ npm version patch -m "Upgrade to %s for reasons"
 npm view 包名
 ```
 
+### npm info
+
+- 在当前包下查看包的信息
+
+```
+npm info
+```
+
 ### npm dist-tag
 
 - 显示所有的 tag 信息
