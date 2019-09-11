@@ -40,17 +40,17 @@ Jest 使用匹配器让你通过不同的方式测试值。不同的匹配器实
 
 ### 常用的断言
 
-`toBe`
+- `toBe`
 
-使用 `===` 来测试全等于
+    使用 `===` 来测试全等于
 
-`toEqual`
+- `toEqual`
 
-`toEqual`递归遍历检查对象或数组里的每一个领域,可以用于检查一个对象`object`中的值
+    `toEqual`递归遍历检查对象或数组里的每一个领域,可以用于检查一个对象`object`中的值
 
-`.not`
+- `.not`
 
-`.not`修饰符允许你测试结果不等于某个值的情况，这和英语的语法几乎完全一样，很好理解。
+    `.not`修饰符允许你测试结果不等于某个值的情况，这和英语的语法几乎完全一样，很好理解。
 
 ### Truthiness
 
@@ -154,7 +154,7 @@ testRenderer.unmount()
 卸载内存中的树，会触发相应的生命周期事件。
 
 
-### 操作`dom`:`react-dom/test-utils` or `@testing-library/react`
+### 操作`dom`: `react-dom/test-utils` or `@testing-library/react`
 
 [文件示例]()
 
