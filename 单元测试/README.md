@@ -9,8 +9,10 @@
 ## 编写第一个`Jest`示例
 
 打开如下文件
-[sum.js 文件]()
-[sum.test.js 文件]()
+
+[sum.js 文件](https://github.com/MrSeaWave/test-training/blob/master/utils/sum.js)
+
+[sum.test.js 文件](https://github.com/MrSeaWave/test-training/blob/master/tests/sum.test.js)
 
 接着运行
 
@@ -36,7 +38,7 @@ Time:        1.108s
 
 Jest 使用匹配器让你通过不同的方式测试值。不同的匹配器实在太多了，所以这里只尝试列出最有用的。
 
-[文件示例]()
+[文件示例](https://github.com/MrSeaWave/test-training/blob/master/tests/common_matchers.test.js)
 
 ### 常用的断言
 
@@ -96,7 +98,7 @@ Jest 使用匹配器让你通过不同的方式测试值。不同的匹配器实
 
 ## 测试异步函数
 
-[文件示例]()
+[文件示例](https://github.com/MrSeaWave/test-training/blob/master/tests/request.test.js)
 
 - 支持使用`async`和`await`写法
 - `Promise`写法一定要返回`return`一个`promise`
@@ -107,7 +109,7 @@ Jest 使用匹配器让你通过不同的方式测试值。不同的匹配器实
 
 ### `react-test-renderer`
 
-[文件示例]()
+[文件示例](https://github.com/MrSeaWave/test-training/blob/master/tests/Components/Link.test.js)
 
 这个 `package` 提供了一个 `React` 渲染器，用于将 `React` 组件渲染成纯 `JavaScript` 对象，无需依赖 `DOM` 或原生移动环境。
 
@@ -156,7 +158,7 @@ testRenderer.unmount()
 
 ### 操作`dom`: `react-dom/test-utils` or `@testing-library/react`
 
-[文件示例]()
+[文件示例](https://github.com/MrSeaWave/test-training/blob/master/tests/Components/Counter.test.js)
 
 ##### `act`
 为断言准备一个组件，包裹要渲染的代码并在调用 `act()` 时执行更新。这会使得测试更接近 `React` 在浏览器中的工作方式。
