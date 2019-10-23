@@ -105,16 +105,17 @@ npm version patch -m "Upgrade to %s for reasons"
 开发阶段测试
 
 1. 当本地写完 npm 包的代码时，如果是业务依赖或者有服务依赖想简单跑个主流程，很简单我们就在本地项目引入这个本地 npm 包，比如 B 项目 依赖 本地开发的 npm 包 A，那我们开始安装一下：
-   ```
-   $ npm install --save ../A/packages/modules
-   ```
-   或者
-   ```
-   yarn add ../A/packages/modules
-   ```
-   即可，安装成功后会 发现 B 项目的 package.json 中显示依赖如下 "A": "file:../A/packages/modules" 注意：modules 文件夹下需要包含 package.json 文件并在文件夹中申明 包名和入口文件如下：
-   ```
-   {
+   - 方法一
+     ```
+     $ npm install --save ../A/packages/modules
+     ```
+     或者
+     ```
+     $ yarn add ../A/packages/modules
+     ```
+     即可，安装成功后会 发现 B 项目的 package.json 中显示依赖如下 "A": "file:../A/packages/modules" 注意：modules 文件夹下需要包含 package.json 文件并在文件夹中申明 包名和入口文件如下：
+     ```json
+     {
        "name": "A",
        "version": "0.0.1",
        "description": "基础库",
@@ -123,8 +124,24 @@ npm version patch -m "Upgrade to %s for reasons"
          "test": "echo \"Error: no test specified\" && exit 1"
        },
        "license": "MIT"
-   }
-   ```
+     }
+     ```
+   - 方法二
+     在这里，我们有两个项目，一个是`npm-link-module`，是我们要开发的`npm`模块,另一个是`npm-link-example`,是我们要运行`npm`模块的项目
+     首先，进入`npm-link-module`项目，执行`npm link`
+     ```
+     $ cd npm-link-module
+     $ npm link
+     ```
+     然后，进入`npm-link-example`项目，执行`npm link npm-link-module`
+     ```
+     $ cd npm-link-example
+     $ npm link npm-link-module
+     ```
+     卸载
+     ```
+     $ npm unlink npm-link-module
+     ```
 2. 开发的自动化测试
 
    使用 jest 测试
@@ -146,11 +163,6 @@ npm version patch -m "Upgrade to %s for reasons"
 ### 关于 ci （持续化部署）
 
 可以在 [travis-ci](https://www.travis-ci.org/) 上注册上自己的 `github` 账号，然后配置一个 `.travis.yml` 文件即可完成自动化打包压缩等等。`Hexo` 博客都是使用这种方式进行更新代码的
-
-## 参考链接
-
-- [yarn](https://yarnpkg.com/lang/zh-hans/docs/dependency-types/)
-- [npm 发包小记](https://segmentfault.com/a/1190000015448278)
 
 ## npm 命令
 
@@ -185,3 +197,8 @@ npm info
   ```
   npm dist-tag add <pkg>@<version> latest
   ```
+
+## 参考链接
+
+- [yarn](https://yarnpkg.com/lang/zh-hans/docs/dependency-types/)
+- [npm 发包小记](https://segmentfault.com/a/1190000015448278)
