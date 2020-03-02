@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>zero-width</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+  </head>
+  <body>
+    <div id="content">
+      <p>零宽字符</p>
+      <input
+        id="name"
+        type="text"
+        placeholder="请输入待加密文字"
+        oninput="encoded(this.value)"
+      />
+      <p id="encoded-text"></p>
+      <input
+        id="copied-text"
+        type="text"
+        placeholder="请输入加密过的文字"
+        oninput="decoded(this.value)"
+      />
+      <p id="show-text"></p>
+    </div>
+    <ul class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <script type="text/javascript" src="./start.js"></script>
+  </body>
+</html>
