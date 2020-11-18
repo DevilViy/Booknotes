@@ -128,6 +128,10 @@ Issue #1, #2
 Close #1
 ```
 
+## 使用软件进行commit规范化
+
+- `JS`: [commit-demo](https://github.com/MrSeaWave/commit-standard-demo)
+
 ## 参考文档
 
 - [Commit message 和 Change log 编写指南](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
